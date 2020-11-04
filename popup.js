@@ -13,14 +13,12 @@ var textPlace = document.querySelector("#text");
             clearText();
         }
         textPlace.focus();
-       
         count();
     })
 })()
 
 document.querySelector("#button").addEventListener('click', erase);
 document.querySelector("#undo").addEventListener('click', undo)
-
 
 function erase() {
     chrome.storage.sync.remove('text');
@@ -55,13 +53,9 @@ function count(){
                 notify(notifyWarning);
             }
             count.textContent = data.text.length;
-        }
-       
-       
+        }  
     })
 }
-
-
 function notify(notifMessage) {
     var notifOptions = {
         type: "basic",
@@ -74,5 +68,4 @@ function notify(notifMessage) {
             console.log("Created.")
         });
     })
-   
 }

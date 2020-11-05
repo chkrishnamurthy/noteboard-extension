@@ -11,7 +11,6 @@ chrome.contextMenus.onClicked.addListener((clickData) => {
     if (clickData.menuItemId == "updateSticky") {
         let newText = clickData.selectionText;
         chrome.storage.sync.get("text", function(result) {
-            console.log(result.text);
             var a;
             if(result.text == undefined){
                 a = newText;
@@ -21,7 +20,6 @@ chrome.contextMenus.onClicked.addListener((clickData) => {
             chrome.storage.sync.set({ "text": a });
         })
     }
-
 
 })
 

@@ -65,7 +65,7 @@ body {
   /* flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right */
 }
 
-#text {
+#notes {
   width: 100%;
   min-height: 420px;
   overflow: scroll;

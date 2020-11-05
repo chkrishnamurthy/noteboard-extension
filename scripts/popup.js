@@ -38,7 +38,7 @@ $( document ).ready(function() {
      const clearText = () =>{  textPlace.value = "";textPlace.placeholder = "Enter something..."}
     
     
-    const count= ()=>{
+    const count= () =>{
         Storage.get("text", function(data) {
            const count =  $("#countVisible")[0];
             if(data.text === undefined){

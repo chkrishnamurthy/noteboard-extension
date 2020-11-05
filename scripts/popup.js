@@ -66,7 +66,7 @@ $( document ).ready(function() {
         };
         Notification.clear("limitNotif",function(data){
             Notification.create("limitNotif", notifOptions, function() {
-                console.log("Created.")
+                
             });
         })
     }

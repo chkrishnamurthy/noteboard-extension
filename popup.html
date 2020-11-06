@@ -1,33 +1,39 @@
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/popup.css" />
+  </head>
+  <script src="/scripts/jquery-3.5.1.min.js"></script>
 
-<head>
-    <link rel="stylesheet" href="/css/popup.css">
-</head>
-<script src="/scripts/jquery-3.5.1.min.js"></script>
-
-<body>
-
+  <body>
     <div class="textBody">
-        <div id="wrapper">
-            <div id="paper">
-                <div id="margin">
-                    <div class="container">
-                        <div>Personal Sticky </div>
-                        <div id="count"><span id="countVisible">0</span>/8186</div>
-                    </div>
-                </div>
-
-
-
-                <textarea placeholder="Enter something..." id="notes" name="text" rows="4" style="overflow: auto; word-wrap: break-word; resize: none; height: 160px; ">
-                </textarea>
-                <img src="">
-                <br>
+      <div id="wrapper">
+        <div id="paper">
+          <div id="margin">
+            <div class="container">
+              <div>Personal Sticky</div>
+              <div id="count"><span id="countVisible">0</span>/8186</div>
             </div>
-            <input id="button" type="submit" value="Erase">
-           
-        </div>
+          </div>
 
+          <textarea
+            placeholder="Enter something..."
+            id="notes"
+            name="text"
+            rows="4"
+            style="
+              overflow: auto;
+              word-wrap: break-word;
+              resize: none;
+              height: 160px;
+            "
+          >
+          </textarea>
+          <img src="" />
+          <br />
+        </div>
+        <input id="button" type="submit" value="Erase" />
+      </div>
     </div>
-</body>
-<script src="/scripts/popup.js"></script>
+  </body>
+  <script src="/scripts/popup.js"></script>
+</html>

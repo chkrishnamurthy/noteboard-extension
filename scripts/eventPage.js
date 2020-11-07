@@ -15,6 +15,19 @@ chrome.contextMenus.onClicked.addListener((clickData) => {
         result.text == undefined ? newText : result.text.concat(" " + newText);
       chrome.storage.sync.set({ text: a });
     });
+
+    const g = {
+      url: chrome.extension.getURL("popup.html"),
+      type: "popup",
+      top: 100,
+      left: 50,
+      width: 730,
+      height: 575,
+      focused: true,
+      state: "normal",
+    };
+    chrome.windows.create(g);
+    // chrome.windows.create(createData);
   }
 });
 
@@ -27,3 +40,14 @@ chrome.contextMenus.onClicked.addListener((clickData) => {
 //         // sendResponse({farewell: "goodbye"});
 
 //     });
+
+// function onCreated(window) {
+//   console.log("Created");
+//   chrome.windows.update(
+//     window.id,
+//     { state: "maximized" },
+//     function onUpdated() {
+//       console.log("Maximized");
+//     }
+//   );
+// }

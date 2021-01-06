@@ -1,7 +1,7 @@
 const dom = document.querySelector("body");
 const Instance = new Mark(dom);
 
-function debounce(callback) {
+const debounce = (callback) => {
   let timer;
   return (...args) => {
     clearTimeout(timer);
@@ -10,14 +10,12 @@ function debounce(callback) {
       callback(...args);
     }, 200);
   };
-}
+};
 
 var options = {
   className: "markstyle",
   separateWordSearch: true,
   filter: function (node, term, totalCounter, counter) {
-    console.log(document.getSelection());
-    document.getSelection();
     return true;
   },
 };

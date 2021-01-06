@@ -1,30 +1,38 @@
 {
-    "manifest_version": 2,
-    "name": "Sticky Notes",
-    "version": "1.0",
-    "description": "Uses like as a Sticky Notes",
-    "permissions": [
-        "storage",
-        "tabs",
-        "notifications",
-        "contextMenus",
-        "unlimitedStorage"
-    ],
+  "manifest_version": 2,
+  "name": "Note Board Sticky Notes",
+  "version": "1.0",
+  "description": "Simple and very light weight extension,it remind your works or tasks.",
 
-    "browser_action": {
-         "default_icon": "icons/16.png",
-        "default_title": "Click Me Here",
-        "default_popup": "/popup.html"
-    },
+  "permissions": [
+    "storage",
+    "notifications",
+    "contextMenus",
+    "unlimitedStorage"
+  ],
 
-    "background": {
-        "scripts": ["/scripts/eventPage.js"],
-        "persistent": false
-    },
-    "icons": {
-        "16": "icons/16.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
+  "browser_action": {
+    "default_icon": "icons/16.png",
+    "default_title": "Click Me Here",
+    "default_popup": "/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "js": ["./scripts/mark.js", "./scripts/cs.js"],
+      "css": ["./css/mark.css"]
     }
+  ],
 
+  "background": {
+    "scripts": ["/scripts/eventPage.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
 }
